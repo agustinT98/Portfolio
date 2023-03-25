@@ -1,0 +1,42 @@
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  margin: auto;
+  display: table;
+}
+	.container h2{
+       float: center;
+       position: relative;
+	}
+	h2 span{
+		position: absolute;
+		right: 0;
+		width: 0;
+        background-color: #fff;
+        
+		animation: maquina 3s infinite alternate steps(50) ;
+		}
+		@keyframes maquina {
+			from {
+				width: 100%;
+			}
+			to {
+				width: 0;
+				}
+				}
+                
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.footer {
+    background-color: #242424;
+    
+}
