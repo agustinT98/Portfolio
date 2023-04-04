@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+/*animacion maquina escribir */
 .container {
   margin: auto;
   display: table;
@@ -28,14 +29,3 @@ body {
 				width: 0;
 				}
 				}
-                
-.card {
-    display: flex;
-    flex-direction: column;
-     
-}
-
-.footer {
-    background-color: #242424;
-    
-}
