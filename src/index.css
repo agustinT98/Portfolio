@@ -7,7 +7,10 @@ html {
 	margin-bottom: 40px;
 	display: inline-block;
   }
-
+.logo {
+	filter: drop-shadow(8px 8px 4px #50B792);
+	
+}
 /*animacion maquina escribir */
 .container {
   margin: auto;
@@ -42,7 +45,7 @@ html {
 					
 				  }
 .titulos {
-	
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	border-radius: 10px;
 	margin-top: 10%;
 	margin-left: 15%;
@@ -51,7 +54,9 @@ html {
 	color: #f3f3f3;
 	background-color: #242424;
 	width: 70%;
+	height: 55px;
 }
+ 
 .article {
 	text-align: center;
 	margin-top: 5%;
@@ -59,19 +64,45 @@ html {
 	margin-right: 5%;
 	width: 90%;
 }
+ 
+.cards {
+	
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	
+	  
+}
+.card {
+	background-color: #d7d7d7;
+	
+}
 
-.zoom { 
-	transition: transform .2;
+.card-img-top {
+	height: 100%;
+    object-fit: contain;
+}
+.cardtitle{
+ 
+	text-align: center;
+}
+.btn-dark{
+	background-color: #242424;
+	
+}
+.btn-dark:hover{
+	filter: drop-shadow(8px 8px 4px #f14747);
+}
+ .zoom { 
+	transition: transform .1;
 }
 .zoom:hover{
-	transform: scale(1.5);
+	transform: scale(1.2);
 }
-.checked{
-	color: orange;
-}
-
+ 
+ 
 .flip-card {
-	 
+	
 	background-color: transparent;
 	width: 300px;
 	height: 200px;
@@ -100,19 +131,31 @@ html {
   .flip-card-front, .flip-card-back {
 	position: absolute;
 	background-color: #242424;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
 	width:300px;
 	height:300px;
+	border-radius: 100%;
 	-webkit-backface-visibility: hidden; /* Safari */
 	backface-visibility: hidden;
+	
   }
   
-  /* Style the front side (fallback if image is missing) */
-  .flip-card-front {
-	background-color: #bbb;
-	color: black;
-  }
+  
   
   /* Style the back side */
   .flip-card-back {
 	transform: rotateY(180deg);
   }
+
+  /* Style nav */
+.navbar{
+	background-color:#242424;
+	
+}
+.habilidades {
+	border: red solid 2px;
+	
+}
