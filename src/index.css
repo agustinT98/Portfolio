@@ -158,9 +158,20 @@ html {
   /* Style nav */
 .navbar{
 	background-color:#242424;
+	min-width: 200px;
+
+	 
 	
 }
 .habilidades {
 	border: red solid 2px;
+	gap: 16px;
 	
+}
+.collapse {
+	flex-wrap: wrap;
+}
+.footer {
+	border: red 2px solid;
+	color: white;
 }
