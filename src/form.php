@@ -1,17 +1,16 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $message = $_POST["message"];
-    $to = "agustoponi354@gmail.com";
-    $subject = "Contacto portfolio";
-    $headers = "From: $email";
+<?php 
+    $nombre = $_POST['name'];
+    $mail = $_POST['email'];
+    $mensaje = $_POST['message'];
 
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Mensaje enviado correctamente";
-    } else {
-        echo "Ha ocurrido un error enviando el mensaje, por favor reintente o diríjase a 
-        <a href='https://www.linkedin.com/in/agustin-toponi-557362198/'>LinkedIn</a>";
-    }
-}
+    $mensaje = "Este mensaje fue enviado por" . $nombre . ". \r\n";
+    $mensaje .= "Su e-mail es: " . $mail . ". \r\n";
+    $mensaje .= "El mensaje es: " . $_POST['mensaje'] . ". \r\n";
+
+    $to = 'agustoponi354@gmail.com';
+    $asunto = 'Contacto portfolio.';
+
+    mail( $to, $asunto, utf8_decode($mensaje), $header);
+
+    $header('Location:index.html');
 ?>
