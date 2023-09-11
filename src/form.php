@@ -10,7 +10,7 @@
     $to = 'agustoponi354@gmail.com';
     $asunto = 'Contacto portfolio.';
 
-    mail( $to, $asunto, utf8_decode($mensaje), $header);
+    mail( $to, $asunto, ($mensaje), $header);
 
     $header('Location:index.html');
 ?>

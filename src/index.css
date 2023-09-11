@@ -1,95 +1,92 @@
-html {
-	min-height: 100%;
-	position: relative;
-  }
-  body {
-	margin: 0;
-	margin-bottom: 40px;
-	display: inline-block;
-  }
-.logo {
-	filter: drop-shadow(8px 8px 4px #50B792);
-	
-}
-/*animacion maquina escribir */
-.container {
-  margin: auto;
-  display: table;
-}
-	.container h2{
-       float: center;
-       position: relative;
-	   text-align: center;
-	}
-	h2 span{
-		position: absolute;
-		right: 0;
-		width: 0;
-        background-color: #fff;
-		animation: maquina 3s infinite alternate steps(50) ;
-		}
-		@keyframes maquina {
-			from {
-				width: 100%;
-			}
-			to {
-				width: 0;
-				}
-				}
-				footer {
-					 
-					position: absolute;
-					bottom: 0;
-					width: 100%;
-					height: 40px;
-					
-				  }
-.titulos {
-	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-	border-radius: 10px;
-	margin-top: 10%;
-	margin-left: 15%;
-	margin-right: 15%;
-	text-align: center;
-	color: #f3f3f3;
-	background-color: #242424;
-	width: 70%;
-	height: 55px;
-}
- 
-.article {
-	text-align: center;
-	margin-top: 5%;
-	margin-left: 20%;
-	margin-right: 20%;
-	width: 60%;
-	padding: 20px;
-	box-shadow:
-		 inset 0 -3em 3em rgba(0,0,0,0.1),
-			   0 0  0 2px rgb(255,255,255),
-			   0.3em 0.3em 1em rgba(0,0,0,0.3);
-}
- 
-.cards {
-	
-	margin-left: 5%;
-	margin-right: 5%;
-	width: 90%;
-	
-	  
-}
-.card {
-	background-color: #d7d7d7;
-	
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background: radial-gradient(110.27% 68.56% at 50% 50%, #32337F 0%, #624398 25%, #32337F 49.48%, #503151 69.79%, #14143B 100%);
+	 
 }
 
-.card-img-top {
-	height: 100%;
-    object-fit: contain;
+/* Estilos de la barra de navegación */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
 }
-.cardtitle{
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.navbar {
+	background-color: radial-gradient(110.27% 68.56% at 50% 50%, #32337F 0%, #624398 25%, #32337F 49.48%, #503151 69.79%, #14143B 100%);
+}
+/* Estilos de la sección de imagen de fondo */
+.imagen-de-fondo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	min-height: 70vh;
+    background-image: url('/img/prueba.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+	box-shadow: 0 0 50px rgb(245, 103, 238);
+	 
+}
  
-	text-align: center;
+.text-container {
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start;  
+    justify-content: flex-start;
+	 margin-left: 0;
+	color: #0986E0;
+	text-shadow: white 2px 3px 5px;
+	font-family: Roboto Mono;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+     
+}
+
+
+/* Estilos de las secciones (About, Work, Skills) */
+section {
+    padding: 40px;
+    text-align: center;
+}
+.py-5 {
+    min-height: 100vh;
+    box-shadow: 0 0 50px rgb(245, 103, 238);
+}
+.container h1 {
+    color: #0986E0;
+	text-shadow: white 2px 3px 5px;
+	font-family: Roboto Mono;
+	font-size: 3rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 }
 .btn-dark{
 	background-color: #242424;
@@ -98,80 +95,52 @@ html {
 .btn-dark:hover{
 	filter: drop-shadow(8px 8px 4px #f14747);
 }
- .zoom { 
-	transition: transform .1;
+/* Estilos del formulario de contacto */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
 }
-.zoom:hover{
-	transform: scale(1.2);
-}
- 
- 
-.flip-card {
-	
-	background-color: transparent;
-	width: 300px;
-	height: 200px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: left;
-  }
-  
-  /* This container is needed to position the front and back side */
-  .flip-card-inner {
-	
-	position: relative;
-	width: 100%;
-	height: 100%;
-	text-align: left;
-	transition: transform 0.8s;
-	transform-style: preserve-3d;
-  }
-  
-  /* Do an horizontal flip when you move the mouse over the flip box container */
-  .flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-  }
-  
-  /* Position the front and back side */
-  .flip-card-front, .flip-card-back {
-	position: absolute;
-	background-color: #242424;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items: center;
-	width:300px;
-	height:300px;
-	border-radius: 100%;
-	-webkit-backface-visibility: hidden; /* Safari */
-	backface-visibility: hidden;
-	
-  }
-  
-  
-  
-  /* Style the back side */
-  .flip-card-back {
-	transform: rotateY(180deg);
-  }
 
-  /* Style nav */
-.navbar{
-	background-color:#242424;
-	min-width: 200px;
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
 
-	 
-	
+/* Estilos del pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
-.habilidades {
-	border: red solid 2px;
-	gap: 16px;
-	
+
+footer ul {
+    list-style: none;
+    padding: 0;
 }
-.collapse {
-	flex-wrap: wrap;
+
+footer ul li {
+    display: inline;
+    margin-right: 10px;
 }
-.footer {
-	border: red 2px solid;
-	color: white;
+.list-inline-item:hover {
+    text-shadow: white 2px 3px 5px;
+}
+/* Estilos responsive */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+	.text-container {
+		color: #0986E0;
+		font-size: 2rem;
+	}
 }
