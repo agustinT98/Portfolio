@@ -57,7 +57,7 @@
 
     <!-- Sección About -->
     <section id="about" class="py-5">
-        <div class="container">
+        <div class="container about">
             <h1>About Me</h1>
             <p>Mi nombre es Agustin Toponi, tengo 25 años y soy Desarrollador de Software.</p>
             <p>Inicie mi camino en el mundo de la programación con 21 años, cursando la carrera de Tecnico Superior en Desarrollo de Software, en mi ciudad natal.</p>
@@ -87,18 +87,18 @@
                   <img src="/img/RMVC.png" class="card-img-top" alt="rmvcscreen">
                   <div class="card-body">
                     <h5 class="card-title">RMV&C</h5>
-                    <p class="card-text">RMV&C es una aplicación creada para manejar el sistema de gestion ERP de una empresa, en este caso fue usado por una farmacia. 
+                    <p class="card-text">RMV&C es una aplicación que maneja el sistema de gestion ERP de una empresa. 
                         La app está creada con PHP, HTML, CSS y Bootstrap.
                     </p>
                     <a href="https://github.com/agustinT98/RMVC" class="btn btn-dark" target="_blank">RMV&C Github </a> 
                   </div>
                 </div>
                 <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
+                  <img src="./img/portfolio.png" class="card-img-top" alt="porfolioscreen">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                    <h5 class="card-title">Portfolio</h5>
+                    <p class="card-text">Portfolio personal creado con el fin de mostrar al mundo mis proyectos realizados y poder ser contactado por empresas.</p>
+                    <a href="https://github.com/agustinT98/Portfolio" class="btn btn-dark" target="_blank">Portfolio Github </a> 
                   </div>
                 </div>
               </div>
@@ -109,12 +109,41 @@
     <section id="skills" class="py-5">
         <div class="container">
             <h1>Skills</h1>
-            <ul>
-                <li>Una habilidad</li>
-                <li>Otra habilidad</li>
-                <li>Otra habilidad más</li>
-            </ul>
-        </div>
+            <div class="row row-cols-1 row-cols-md-3 g-4 skills">
+                <div class="col">
+                  <div class="card h-50">
+                    <img src="./img/html.jpg" class="card-img-top" alt="html.">
+                    
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-50">
+                    <img src="./img/css.jpg" class="card-img-top" alt="css">
+  
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-50">
+                    <img src="./img/javascript.jpg" class="card-img-top" alt="JS">
+                    
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card h-50">
+                    <img src="./img/react.jpg" class="card-img-top" alt="react">
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-50">
+                      <img src="./img/php.png" class="card-img-top" alt="php">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-50">
+                      <img src="./img/MySQL-Logo.jpg" class="card-img-top" alt="mysql">
+                    </div>
+                  </div>
+              </div>
     </section>
 
     <!-- Sección de contacto -->
@@ -122,7 +151,26 @@
         <div class="container">
             <h1>Contact Me</h1>
             <form>
-                <!-- Campos del formulario -->
+              <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3">
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                  <input type="textarea" class="form-control" id="inputPassword3">
+                </div>
+              </div>
+             
+              <button type="submit" class="btn btn-primary">Sign in</button>
             </form>
         </div>
     </section>
