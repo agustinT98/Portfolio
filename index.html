@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./src/index.css" type="text/css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
+          
 </head>
 <body>
     <!-- Barra de navegación -->
@@ -26,14 +27,14 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           
-          <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end offcanvas-sm" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-              <a class="navbar-brand" href="/">
+              <a class="navbar-brand" href="#/">
                 <img src="/img/Logo_Topo_Chico.png" alt="logo" width="60" height="54">
               Menú</a>
               <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body bg-dark">
+            <div class="offcanvas-body custom-bg-transparent">
               <ul class="navbar-nav custom-navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#about">About</a>
@@ -56,7 +57,7 @@
     </nav> 
     
     <!-- Sección de imagen de fondo -->
-    <section class="imagen-de-fondo text-white text-center">
+    <section id="/" class="imagen-de-fondo text-white text-center">
         <div class="container text-container">
          
           <p><b>
@@ -129,7 +130,7 @@
             <div class="row row-cols-1 row-cols-md-3 g-4 skills">
                 <div class="col">
                   <div class="card h-50">
-                    <img src="./img/html.jpg" class="card-img-top" alt="html.">
+                    <img src="./img/html.jpg" class="card-img " alt="html.">
                     
                   </div>
                 </div>
@@ -166,30 +167,31 @@
     <!-- Sección de contacto -->
      
     <section id="contact" class="py-5">
-        <div class="container">
+        <div class="container form">
             <h1>Contactame: </h1>
             <div class="col-lg-6 col-md-12" data-form>
-              <form class="form" method="POST" action="form.php" autocomplete="off">
+              <form id="form" method="POST" action="form.php" autocomplete="off">
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre y Apellido: </label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" required>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required >
                 </div>
 
                 <div class="mb-3">
                   <label for="email" class="form-label">Email: </label>
-                  <input type="email" class="form-control" id="email" name="email" required  >
+                  <input type="email" class="form-control" id="email" name="email"  required  >
                 </div>
 
                 <div class="mb-3">
                   <label for="asunto" class="form-label">Asunto: </label>
-                  <input type="text" class="form-control" id="asunto" name="asunto" required  >
+                  <input type="text" class="form-control" id="asunto" name="asunto"  required  >
                 </div>
 
                 <div class="mb-3">
                   <label for="mensaje" class="form-label">Mensaje: </label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
-
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required ></textarea>
+                  <span class="warnings" id="warnings"></span>
                   <button type="submit" name="submit" class="btn btn-dark">Enviar </button>
+                  
                 </div>
               </form>
             </div>
@@ -207,9 +209,11 @@
     </footer>
 
     <!--Scripts-->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/7e15515e3d.js" crossorigin="anonymous"></script>
+    <script src="/src/index.js"></script>
     
 </body>
 </html>

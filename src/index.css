@@ -51,6 +51,9 @@ nav ul li a {
     margin-left: auto;
   }
   
+  .custom-bg-transparent {
+    background-color: rgba(0, 0, 0, 0.514); /* Ajusta el valor alpha para controlar la transparencia */
+}
 
 /* Estilos de la sección de imagen de fondo */
 .imagen-de-fondo {
@@ -151,20 +154,19 @@ line-height: normal;
     margin-top: 5%;
 }
 /* Estilos del formulario de contacto */
-form {
-    max-width: 400px;
-    margin: 0 auto;
-    
-
-}
-
+ 
 form input[type="text"],
 form textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
 }
-    
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}  
 .form-label {
     color: #FFF;
 text-align: start;
@@ -173,6 +175,17 @@ font-size: 1.5rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
+}
+.warnings {
+    height: 20%;
+    color: #FFF;
+    text-align: start;
+    font-family: Roboto Mono;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+     
 }
 /* Estilos del pie de página */
 footer {
@@ -206,7 +219,7 @@ footer ul li {
     }
 	.text-container {
 		color: #0986E0;
-		font-size: 2rem;
+		font-size: 1.6rem;
 	}
     .container h1 {
         font-size: 1.6rem;
@@ -214,7 +227,5 @@ footer ul li {
     .card-title {
         font-size: 1.6rem;
     }
-    .offcanvas {
-        width: 15%;
-    }
+   
 }
