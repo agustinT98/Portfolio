@@ -4,41 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agustin Portfolio</title>
-     
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/index.css">
+    <link rel="icon" type="icon" href="/Logo_Topo_Chico.png">
+    <link rel="stylesheet" href="./src/index.css" type="text/css">
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Roboto+Mono">
 </head>
 <body>
     <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar">
-        <div class="container">
-          <a class="navbar-brand" href="#home">
-            <img src="/img/Logo_Topo_Chico.png" alt="logo" width="60" height="54">
-          </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work">Work</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
+   <nav class="navbar fixed-top navbar-expand-lg navbar-dark nvbar">
+        <div class="container-fluid">
+          <div class="navbar-brand">
+            <a  href="/">
+              <img src="/img/Logo_Topo_Chico.png" alt="logo" width="60" height="54">
+            </a>
+          </div>
+          
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="offcanvas offcanvas-end offcanvas-lg" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <a class="navbar-brand" href="/">
+                <img src="/img/Logo_Topo_Chico.png" alt="logo" width="60" height="54">
+              Menú</a>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body bg-dark">
+              <ul class="navbar-nav custom-navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#work">Work</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Contact</a>
+                </li>
+              </ul>
+              
+            </div>
+          </div>
+          
         </div>
-    </nav>
-
+    </nav> 
+    
     <!-- Sección de imagen de fondo -->
     <section class="imagen-de-fondo text-white text-center">
         <div class="container text-container">
@@ -58,8 +74,8 @@
 
     <!-- Sección About -->
     <section id="about" class="py-5">
-        <div class="container about">
-            <h1>About Me</h1>
+        <div class="container sobre">
+            <h1>Sobre mi: </h1>
             <p>Mi nombre es Agustin Toponi, tengo 25 años y soy Desarrollador de Software.</p>
             <p>Inicie mi camino en el mundo de la programación con 21 años, cursando la carrera de Tecnico Superior en Desarrollo de Software, en mi ciudad natal.</p>
             <p>Luego de terminar mi carrera, he realizado diferentes cursos para poder especializarme más dentro del mundo de la programacion web, más concretamente en el desarrollo front-end 
@@ -73,7 +89,7 @@
     <!-- Sección Work -->
     <section id="work" class="py-5">
         <div class="container">
-            <h1>My Work</h1>
+            <h1>Mis trabajos: </h1>
             <div class="card-group">
                 <div class="card">
                   <img src="./img/Mundogamer.png" class="card-img-top" alt="mundogamerss">
@@ -109,7 +125,7 @@
     <!-- Sección Skills -->
     <section id="skills" class="py-5">
         <div class="container">
-            <h1>Skills</h1>
+            <h1>Mis habilidades: </h1>
             <div class="row row-cols-1 row-cols-md-3 g-4 skills">
                 <div class="col">
                   <div class="card h-50">
@@ -148,14 +164,15 @@
     </section>
 
     <!-- Sección de contacto -->
+     
     <section id="contact" class="py-5">
         <div class="container">
-            <h1>Contact Me</h1>
-            <div class="col-lg-6 col-md-12">
+            <h1>Contactame: </h1>
+            <div class="col-lg-6 col-md-12" data-form>
               <form class="form" method="POST" action="form.php" autocomplete="off">
                 <div class="mb-3">
                   <label for="nombre" class="form-label">Nombre y Apellido: </label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" required autofocus>
+                  <input type="text" class="form-control" id="nombre" name="nombre" required>
                 </div>
 
                 <div class="mb-3">
@@ -169,7 +186,7 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="mensaje" class="form-label">Nombre y Apellido: </label>
+                  <label for="mensaje" class="form-label">Mensaje: </label>
                   <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required></textarea>
 
                   <button type="submit" name="submit" class="btn btn-dark">Enviar </button>
@@ -177,9 +194,9 @@
               </form>
             </div>
     </section>
-
+ 
     <!-- Pie de página -->
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="nvbar text-white text-center py-3">
         <div class="container">
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="https://github.com/agustinT98" target="_blank"><i class="fa-brands fa-github fa-beat-fade fa-2xl" style="color: #5089ed;"></i></i></a></li>
@@ -190,7 +207,9 @@
     </footer>
 
     <!--Scripts-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/7e15515e3d.js" crossorigin="anonymous"></script>
+    
 </body>
 </html>

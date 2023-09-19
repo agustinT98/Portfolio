@@ -1,10 +1,11 @@
 /* Estilos generales */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 	background: radial-gradient(110.27% 68.56% at 50% 50%, #32337F 0%, #624398 25%, #32337F 49.48%, #503151 69.79%, #14143B 100%);
-	 
+	max-width: 100%;
 }
 
 /* Estilos de la barra de navegación */
@@ -34,9 +35,23 @@ nav ul li a {
     color: #fff;
     font-weight: bold;
 }
-.navbar {
-	background-color: radial-gradient(110.27% 68.56% at 50% 50%, #32337F 0%, #624398 25%, #32337F 49.48%, #503151 69.79%, #14143B 100%);
+ 
+  
+.nvbar {
+    
+	font-family: Roboto Mono;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	background: #624398;
+    box-shadow: 0 0 50px rgb(245, 103, 238);
 }
+
+.custom-navbar-nav {
+    margin-left: auto;
+  }
+  
+
 /* Estilos de la sección de imagen de fondo */
 .imagen-de-fondo {
 	display: flex;
@@ -88,16 +103,16 @@ section {
 	font-weight: 700;
 	line-height: normal;
 }
-.about {
+.sobre {
     color: #FFF;
 text-align: start;
 font-family: Roboto Mono;
-font-size: 2rem;
+font-size: 1.6rem;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
-.about h1 {
+.sobre h1 {
     text-align: center;
 }
 .card {
@@ -139,7 +154,8 @@ line-height: normal;
 form {
     max-width: 400px;
     margin: 0 auto;
-    text-align: left;
+    
+
 }
 
 form input[type="text"],
@@ -148,7 +164,16 @@ form textarea {
     padding: 10px;
     margin-bottom: 20px;
 }
-
+    
+.form-label {
+    color: #FFF;
+text-align: start;
+font-family: Roboto Mono;
+font-size: 1.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
 /* Estilos del pie de página */
 footer {
     background-color: #333;
@@ -170,7 +195,7 @@ footer ul li {
     text-shadow: white 2px 3px 5px;
 }
 /* Estilos responsive */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     nav ul {
         flex-direction: column;
     }
@@ -183,4 +208,13 @@ footer ul li {
 		color: #0986E0;
 		font-size: 2rem;
 	}
+    .container h1 {
+        font-size: 1.6rem;
+    }
+    .card-title {
+        font-size: 1.6rem;
+    }
+    .offcanvas {
+        width: 15%;
+    }
 }
