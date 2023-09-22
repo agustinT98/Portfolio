@@ -17,7 +17,7 @@
    <nav class="navbar fixed-top navbar-expand-lg navbar-dark nvbar">
         <div class="container-fluid">
           <div class="navbar-brand">
-            <a  href="/">
+            <a  href="#/">
               <img src="/img/Logo_Topo_Chico.png" alt="logo" width="60" height="54">
             </a>
           </div>
@@ -58,9 +58,12 @@
     
     <!-- Sección de imagen de fondo -->
     <section id="/" class="imagen-de-fondo text-white text-center">
+      
         <div class="container text-container">
-         
-          <p><b>
+          
+          <p>
+            
+            <b>
             Hola, soy Agustin Toponi. </b>
           </p>
           <p>
@@ -129,37 +132,30 @@
             <h1>Mis habilidades: </h1>
             <div class="row row-cols-1 row-cols-md-3 g-4 skills">
                 <div class="col">
-                  <div class="card h-50">
-                    <img src="./img/html.jpg" class="card-img " alt="html.">
+                  <img src="./img/html.jpg" class="img-thumbnail" alt=".html.">
+                   
+                </div>
+                <div class="col">
+                    <img src="./img/css.jpg" class="img-thumbnail" alt="css">
+
+                </div>
+                <div class="col">
+                    <img src="./img/javascript.jpg" class="img-thumbnail" alt="JS">
+                </div>
+                <div class="col">
+                  
+                    <img src="./img/react.jpg" class="img-thumbnail" alt="react">
+                   
+                </div>
+                <div class="col">
                     
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-50">
-                    <img src="./img/css.jpg" class="card-img-top" alt="css">
-  
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-50">
-                    <img src="./img/javascript.jpg" class="card-img-top" alt="JS">
-                    
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="card h-50">
-                    <img src="./img/react.jpg" class="card-img-top" alt="react">
-                  </div>
-                </div>
-                <div class="col">
-                    <div class="card h-50">
-                      <img src="./img/php.png" class="card-img-top" alt="php">
-                    </div>
+                      <img src="./img/php.png" class="img-thumbnail" alt="php">
+                     
                   </div>
                   <div class="col">
-                    <div class="card h-50">
-                      <img src="./img/MySQL-Logo.jpg" class="card-img-top" alt="mysql">
-                    </div>
+                     
+                      <img src="./img/MySQL-Logo.jpg" class="img-thumbnail" alt="mysql">
+                     
                   </div>
               </div>
     </section>
@@ -170,30 +166,35 @@
         <div class="container form">
             <h1>Contactame: </h1>
             <div class="col-lg-6 col-md-12" data-form>
-              <form id="form" method="POST" action="form.php" autocomplete="off">
+              <form id="contact-form" method="POST" action="form.php">
                 <div class="mb-3">
-                  <label for="nombre" class="form-label">Nombre y Apellido: </label>
-                  <input type="text" class="form-control" id="nombre" name="nombre" required >
+                  <label for="nombre" class="form-label">Nombre y apellido:</label>
+                  <input type="text" id="nombre" name="nombre" class="form-control" required>
                 </div>
-
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email: </label>
-                  <input type="email" class="form-control" id="email" name="email"  required  >
+                  <label for="email" class="form-label">Email:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
                 </div>
-
                 <div class="mb-3">
                   <label for="asunto" class="form-label">Asunto: </label>
-                  <input type="text" class="form-control" id="asunto" name="asunto"  required  >
+                  <input type="text" id="asunto" name="asunto" class="form-control" required>
                 </div>
-
                 <div class="mb-3">
-                  <label for="mensaje" class="form-label">Mensaje: </label>
-                  <textarea class="form-control" id="mensaje" name="mensaje" rows="3" required ></textarea>
-                  <span class="warnings" id="warnings"></span>
-                  <button type="submit" name="submit" class="btn btn-dark">Enviar </button>
-                  
+                  <label for="mensaje" class="form-label">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje"  class="form-control" required></textarea>
                 </div>
-              </form>
+                
+        
+                
+                  <div class="mb-3">
+                    <span class="warnings" id="warnings"></span>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
+                     
+                  </div>
+                
+        
+                
+            </form>
             </div>
     </section>
  
@@ -206,6 +207,7 @@
                 <li class="list-inline-item"><a href="https://www.linkedin.com/in/agustin-toponi-557362198/" target="_blank"><i class="fa-brands fa-linkedin fa-beat-fade fa-2xl" style="color: #5089ed;"></i></a></li>
             </ul>
         </div>
+        <span> ©2023 - Agustin Toponi</span>
     </footer>
 
     <!--Scripts-->
@@ -213,7 +215,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/7e15515e3d.js" crossorigin="anonymous"></script>
-    <script src="/src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="/src/index.js"></script>
     
 </body>
 </html>

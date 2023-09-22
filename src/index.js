@@ -1,32 +1,27 @@
-const nombre = document.getElementById("nombre");
-const email = document.getElementById("email");
-const form = document.getElementById("form");
-const text = document.getElementById("warnings");
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("contact-form");
+    const nombre = document.getElementById("nombre");
+    const email = document.getElementById("email");
+    const warnings = document.getElementById("warnings"); // Agregar referencia al elemento span
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    let warnings = "";
-    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-    let entrar = false;
-    text.innerHTML = "";
-    
-    if (nombre.value.length < 6) {
-        warnings += `El nombre ingresado no es válido, por favor ingrese su nombre y apellido. <br>`;
-        entrar = true;
-    }
+    form.addEventListener("submit", function (event) {
+        let errors = [];
 
-    if (!regexEmail.test(email.value)) {
-        warnings += `El email es inválido <br>`;
-        entrar = true;
-    }
+        warnings.innerHTML = ""; // Limpiar cualquier contenido previo en el elemento span
 
-    if (entrar) {
-        text.innerHTML = warnings;
-        text.style.backgroundColor = "#f34b4b";
-         
-    } else {
-        text.innerHTML = "Muchas gracias por enviar su mensaje <br>";
-        text.style.backgroundColor = "#80ed99";
-         
-    }
+        if (nombre.value.trim().length < 6) {
+            errors.push("El nombre ingresado no es válido, por favor ingrese su nombre y apellido.");
+        }
+
+        const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+        if (!emailPattern.test(email.value)) {
+            errors.push("Por favor, ingrese un correo electrónico válido.");
+        }
+
+        if (errors.length > 0) {
+            event.preventDefault();
+            warnings.innerHTML = errors.join("<br>");
+            warnings.style.backgroundColor = "#f34b4b";
+        }
+    });
 });

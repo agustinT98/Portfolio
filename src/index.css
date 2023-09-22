@@ -55,16 +55,20 @@ nav ul li a {
     background-color: rgba(0, 0, 0, 0.514); /* Ajusta el valor alpha para controlar la transparencia */
 }
 
-/* Estilos de la sección de imagen de fondo */
+ 
+ 
 .imagen-de-fondo {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: flex-end;
+    max-width: 100%;
+    height: auto;
 	min-height: 90vh;
     background-image: url('/img/prueba.png');
     background-size: cover;
     background-position: center;
+    
     color: #fff;
     text-align: center;
 	box-shadow: 0 0 50px rgb(245, 103, 238);
@@ -153,6 +157,7 @@ line-height: normal;
 .skills {
     margin-top: 5%;
 }
+ 
 /* Estilos del formulario de contacto */
  
 form input[type="text"],
@@ -218,7 +223,13 @@ footer ul li {
         margin-right: 0;
     }
 	.text-container {
-		color: #0986E0;
+		color: #FFF;
+text-align: start;
+font-family: Roboto Mono;
+font-size: 1.6rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
 		font-size: 1.6rem;
 	}
     .container h1 {
